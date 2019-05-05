@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/background_for_sp"
+    android:layout_height="match_parent"
+    tools:context=".SP">
+
+    <ImageView
+        android:layout_width="198dp"
+        android:layout_height="178dp"
+        android:src="@drawable/sp_logo_social" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:text="Easy Social Media"
+        android:layout_marginTop="20sp"
+        android:textStyle="bold"
+        android:textSize="35dp"
+        android:textColor="#CDDC39"
+        android:layout_height="wrap_content" />
+    <TextView
+        android:layout_marginTop="10dp"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:text="Developed by Freelancing Aid"
+        android:textColor="#2196F3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>
