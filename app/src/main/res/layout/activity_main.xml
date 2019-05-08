@@ -23,33 +23,34 @@
     <LinearLayout
         android:layout_weight="1"
         android:orientation="vertical"
+        android:gravity="center"
         android:layout_width="match_parent"
         android:layout_height="0dp">
 
         <EditText
             android:id="@+id/name_signIn"
-            android:layout_marginTop="20dp"
             android:layout_width="match_parent"
-            android:background="@drawable/login_border"
+            android:layout_height="44dp"
             android:layout_marginLeft="40dp"
-            android:hint="Name or E-mail"
-            android:textColor="#292121"
-            android:paddingLeft="20dp"
             android:layout_marginRight="40dp"
-            android:textSize="25dp"
-            android:layout_height="50dp" />
+            android:background="@drawable/login_border"
+            android:hint="Name or E-mail"
+            android:paddingLeft="20dp"
+            android:textColor="#292121"
+            android:textSize="25dp" />
+
         <EditText
             android:id="@+id/pass_signIn"
-            android:layout_marginTop="10dp"
             android:layout_width="match_parent"
-            android:background="@drawable/login_border"
+            android:layout_height="44dp"
             android:layout_marginLeft="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/login_border"
             android:hint="Password"
             android:inputType="textPassword"
             android:paddingLeft="20dp"
-            android:layout_marginRight="40dp"
-            android:textSize="25dp"
-            android:layout_height="50dp" />
+            android:textSize="25dp" />
         <Button
             android:id="@+id/signinId"
             android:layout_marginTop="20dp"
@@ -61,7 +62,7 @@
             android:textColor="#F3ECEC"
             android:layout_width="match_parent"
             android:background="@drawable/buttonshape"
-            android:layout_height="50dp" />
+            android:layout_height="44dp" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"

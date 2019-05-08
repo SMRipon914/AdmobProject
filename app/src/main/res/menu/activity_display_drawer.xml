@@ -6,17 +6,18 @@
     <group android:checkableBehavior="single">
 
         <item
+            android:id="@+id/optionActivityId"
+            android:icon="@drawable/option_icon"
+            android:title="Options" />
+        <item
             android:id="@+id/facebookActivityId"
             android:icon="@drawable/our_facebook"
             android:title="Facebook" />
         <item
-            android:id="@+id/twitterActivityId"
-            android:icon="@drawable/our_twitter"
-            android:title="Twitter" />
-        <item
-            android:id="@+id/linkedinActivityId"
-            android:icon="@drawable/our_linkedin"
-            android:title="Linkedin" />
+            android:id="@+id/mapActivityId"
+            android:icon="@drawable/map"
+            android:title="Find us google map" />
+
     </group>
 
     <item android:title="Communicate">

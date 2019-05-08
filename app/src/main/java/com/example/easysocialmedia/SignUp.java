@@ -1,6 +1,7 @@
 package com.example.easysocialmedia;
 
 import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -30,6 +31,9 @@ public class SignUp extends AppCompatActivity {
                 editor.putString("name", editText1.getText().toString());
                 editor.putString("pass",editText2.getText().toString());
                 editor.commit();
+                editText1.setText("");
+                editText2.setText("");
+                startActivity(new Intent(getApplicationContext(),MainActivity.class));
             }
         });
 

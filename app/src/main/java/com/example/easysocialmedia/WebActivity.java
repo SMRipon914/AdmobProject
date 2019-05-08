@@ -9,7 +9,9 @@ import android.view.MenuItem;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.Toast;
+
+
+
 
 public class WebActivity extends AppCompatActivity {
 
@@ -20,7 +22,6 @@ public class WebActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_web);
         webView_main = findViewById(R.id.webView_main);
-        //webView_main=findViewById(R.id.webView);
         webView_main.setWebViewClient(new WebViewClient());
         WebSettings webSettings = webView_main.getSettings();
         webSettings.setJavaScriptEnabled(true);
@@ -33,13 +34,17 @@ public class WebActivity extends AppCompatActivity {
             itemList(item);
         }
 
-    }
+
+
+
+
+}
 
     public void itemList(String item) {
         if (item.equals("Pinterest.com")) {
             webView_main.loadUrl("https://www.pinterest.com/");
         } else if (item.equals("Facebook.com")) {
-            webView_main.loadUrl("https://web.facebook.com/login/device-based/regular/login/?login_attempt=1&lwv=110");
+            webView_main.loadUrl("https://mobile.facebook.com/");
         } else if (item.equals("Reddit.com")) {
             webView_main.loadUrl("https://www.reddit.com/");
         } else if (item.equals("linkedin.com")) {
@@ -100,4 +105,19 @@ public class WebActivity extends AppCompatActivity {
         }
         return true;
     }
+    @Override
+    public void onBackPressed() {
+        if (webView_main.canGoBack()){
+            webView_main.goBack();
+        }
+        else{
+            Intent intent = new Intent(this, DisplayActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            intent.putExtra("Exit me", true);
+            startActivity(intent);
+            finish();
+        }
+    }
+
+
 }

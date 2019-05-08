@@ -28,16 +28,17 @@ public class Feedback extends AppCompatActivity implements View.OnClickListener 
     public void onClick(View v) {
         if (v.getId()==R.id.send){
             String name=editText1.getText().toString();
-            String message=editText1.getText().toString();
+            String message=editText2.getText().toString();
             Intent intent=new Intent(Intent.ACTION_SEND);
             intent.setType("text/email");
             intent.putExtra(Intent.EXTRA_EMAIL,new String[] {"mdriponsheikh14@gmail.com"});
-            intent.putExtra(Intent.EXTRA_SUBJECT,"Feedback from Mobile Viewer");
-            intent.putExtra(Intent.EXTRA_TEXT,"Name: "+name+"\n Massage: "+message);
+            intent.putExtra(Intent.EXTRA_SUBJECT,"Feedback from Easy Social Meadia");
+            intent.putExtra(Intent.EXTRA_TEXT,"Name: "+name+"\n Feedback Message: "+message);
             startActivity(Intent.createChooser(intent,"Feedback with"));
         }else if (v.getId()==R.id.reset){
             editText1.setText("");
             editText2.setText("");
         }
     }
+
 }

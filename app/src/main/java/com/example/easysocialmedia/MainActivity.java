@@ -45,6 +45,8 @@ public class MainActivity extends AppCompatActivity {
                     } else {
                         name_signIn.setError("Invalid user Name or Password");
                         name_signIn.requestFocus();
+                        pass_signIn.setError("Invalid user Name or Password");
+                        pass_signIn.requestFocus();
                     }
 
                 }

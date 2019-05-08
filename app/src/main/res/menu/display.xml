@@ -11,10 +11,6 @@
         android:title="Feedback"
         app:showAsAction="never"/>
     <item
-        android:id="@+id/rateId"
-        android:title="Rate us"
-        app:showAsAction="never"/>
-    <item
         android:id="@+id/exitId"
         android:title="Exit"
         app:showAsAction="never"/>

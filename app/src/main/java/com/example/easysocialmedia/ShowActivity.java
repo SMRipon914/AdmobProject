@@ -28,10 +28,8 @@ public class ShowActivity extends AppCompatActivity {
         if (f.equals("ourfacebook")){
             webView.loadUrl("https://www.facebook.com/freelancingaidbd");
         }
-        else if (f.equals("ourtwotter")){
-            Toast.makeText(getApplicationContext(),"ttt",Toast.LENGTH_SHORT).show();
-        } else if (f.equals("ourlinkedin")) {
-            Toast.makeText(getApplicationContext(),"llll",Toast.LENGTH_SHORT).show();
+        else if (f.equals("map")){
+            webView.loadUrl("https://www.google.com/maps/place/%E0%A6%AB%E0%A7%8D%E0%A6%B0%E0%A6%BF%E0%A6%B2%E0%A6%BE%E0%A6%A8%E0%A7%8D%E0%A6%B8%E0%A6%BF%E0%A6%82+%E0%A6%8F%E0%A6%87%E0%A6%A1/@23.8698359,90.3847347,17z/data=!3m1!4b1!4m5!3m4!1s0x3755c4107872706f:0x548b9c20be57c3f5!8m2!3d23.8698359!4d90.3869234");
         }
     }
     @Override
@@ -47,5 +45,18 @@ public class ShowActivity extends AppCompatActivity {
             startActivity(new Intent(getApplicationContext(),DisplayActivity.class));
         }
         return true;
+    }
+    @Override
+    public void onBackPressed() {
+        if (webView.canGoBack()){
+            webView.goBack();
+        }
+        else{
+            Intent intent = new Intent(this, DisplayActivity.class);
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+            intent.putExtra("Exit me", true);
+            startActivity(intent);
+            finish();
+        }
     }
 }
